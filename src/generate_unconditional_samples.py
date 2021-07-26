@@ -52,6 +52,7 @@ def sample_model(
         raise ValueError("Can't get samples longer than window size: %s" % hparams.n_ctx)
 
     with tf.Session(graph=tf.Graph()) as sess:
+        
         np.random.seed(seed)
         tf.set_random_seed(seed)
 
